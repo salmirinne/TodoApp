@@ -28,14 +28,14 @@ public class TodoTaskController : ControllerBase
     }
 
     [HttpPut]
-    [Route("/{id}")]
+    [Route("{id}")]
     public void Update(int id, TodoTaskUpdateRequest request)
     {
         _repository.Update(id, request.Description, request.IsDone);
     }
 
     [HttpDelete]
-    [Route("/{id}")]
+    [Route("{id}")]
     public void Delete(int id)
     {
         _repository.Delete(id);
