@@ -1,0 +1,5 @@
+<h3>Create new task</h3>
+<div>
+  <input type="text" placeholder="Add description..." [(ngModel)]="descriptionValue"/>
+  <button type="button" (click)="createTask()" [disabled]="isCreationDisabled">Add</button>
+</div>

@@ -22,9 +22,9 @@ public class TodoTaskController : ControllerBase
     }
 
     [HttpPost]
-    public TodoTask Insert([FromBody] string description)
+    public TodoTask Insert(TodoTaskCreationRequest request)
     {
-        return _repository.Insert(description);
+        return _repository.Insert(request.Description);
     }
 
     [HttpPut]
@@ -39,6 +39,16 @@ public class TodoTaskController : ControllerBase
     public void Delete(int id)
     {
         _repository.Delete(id);
+    }
+
+    public class TodoTaskCreationRequest
+    {
+        public TodoTaskCreationRequest(string description)
+        {
+            Description = description;
+        }
+
+        public string Description { get; }
     }
 
     public class TodoTaskUpdateRequest

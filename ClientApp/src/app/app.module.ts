@@ -9,6 +9,8 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { TodoTaskCreationComponent } from './todo-task/todo-task-creation.component';
+import { TodoTaskListComponent } from './todo-task/todo-task-list.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    TodoTaskCreationComponent,
+    TodoTaskListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
